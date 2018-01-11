@@ -6,6 +6,8 @@ import android.widget.RelativeLayout;
 import android.widget.Button;
 import android.graphics.Color;
 import android.widget.EditText;
+import android.content.res.Resources;
+import android.util.TypedValue;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -48,8 +50,15 @@ public class MainActivity extends AppCompatActivity {
         usernameDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
         usernameDetails.setMargins(0,0,0,50);
 
+        // getting device app resources
+        Resources r = getResources();
+        // convert pixels in to intiger
+        // px will change from device to device but size will stay the same
+        int px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,200,
+                r.getDisplayMetrics());
 
-
+        // set widht only take int pixels
+        username.setWidth(px);
 
         // Add widget to layout (button is now child of layout)
         rl.addView(redButton, buttonDetails);
