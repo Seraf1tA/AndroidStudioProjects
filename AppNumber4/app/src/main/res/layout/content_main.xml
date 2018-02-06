@@ -36,14 +36,14 @@
             android:text="Lion" />
 
         <TextView
-            android:id="@+id/textLeopard"
+            android:id="@+id/txtLeopard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="Leopard" />
 
         <TextView
-            android:id="@+id/textBird"
+            android:id="@+id/txtBird"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
