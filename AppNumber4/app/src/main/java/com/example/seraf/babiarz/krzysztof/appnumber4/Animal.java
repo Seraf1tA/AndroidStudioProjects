@@ -4,7 +4,7 @@ package com.example.seraf.babiarz.krzysztof.appnumber4;
  * Created by SeraF on 04/02/2018.
  */
 
-public class Animal {
+public class Animal extends Object{
 
     private final String name;
     private final String color;
@@ -19,6 +19,7 @@ public class Animal {
         this.amountOfPower = amountOfPower;
 
     }
+
 
     public String getName(){
         return name;
@@ -44,8 +45,15 @@ public class Animal {
         return amountOfPower;
     }
 
+    public int evaluateAnimalValue(){
+
+        int result = amountOfSpeed * amountOfPower;
+        return result;
+
+    }
+
     @Override
     public String toString() {
-        return String.format("%s: %s %s:%s %d %d", "Name ", name, "Color ", color, amountOfSpeed, amountOfPower);
+        return String.format("%s: %s%n %s: %s%n %s: %d%n %s %d%n", " Name ", name, " Color ", color, " Speed " , amountOfSpeed, " Power ", amountOfPower );
     }
 }
