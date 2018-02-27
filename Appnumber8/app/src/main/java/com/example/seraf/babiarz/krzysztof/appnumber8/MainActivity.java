@@ -60,6 +60,33 @@ public class MainActivity extends AppCompatActivity {
         final CheckBox chxFalseOrTrueYes = (CheckBox) findViewById(R.id.chxFalseOrTrueYes);
         final CheckBox chxFalseOrTrueNo = (CheckBox) findViewById(R.id.chxFalseOrTrueNo);
 
+        //False Or False
+        TextView txtFalseOrFalse = (TextView) findViewById(R.id.txtFalseOrFalse);
+        final CheckBox chxFalseOrFalseYes = (CheckBox) findViewById(R.id.chxFalseOrFalseYes);
+        final CheckBox chxFalseOrFalseNo = (CheckBox) findViewById(R.id.chxFalseOrFalseNo);
+
+        //True ^ True
+
+        TextView txtTrueCaretTrue = (TextView) findViewById(R.id.txtTrueCaretTrue);
+        final CheckBox chxTrueCaretTrueYes = (CheckBox) findViewById(R.id.chxTrueCaretTrueYes);
+        final CheckBox chxTrueCaretTrueNo = (CheckBox) findViewById(R.id.chxTrueCaretTrueNo);
+
+        //True ^ False
+        TextView txtTrueCaretFalse = (TextView) findViewById(R.id.txtTrueCaretFalse);
+        final CheckBox chxTrueCaretFalseYes = (CheckBox) findViewById(R.id.chxTrueCaretFalseYes);
+        final CheckBox chxTrueCaretFalseNo = (CheckBox) findViewById(R.id.chxTrueCaretFalseNo);
+
+        //False ^ True
+        TextView txtFalseCaretTrue = (TextView) findViewById(R.id.txtFalseCaretTrue);
+        final CheckBox chxFalseCaretTrueYes = (CheckBox) findViewById(R.id.chxFalseCaretTrueYes);
+        final CheckBox chxFalseCaretTrueNo = (CheckBox) findViewById(R.id.chxFalseCaretTrueNo);
+
+        //False ^ False
+        TextView txtFalseCaretFalse = (TextView) findViewById(R.id.txtFalseCaretFalse);
+        CheckBox chxFalseCaretFalseYes = (CheckBox) findViewById(R.id.chxFalseCaretFalseYes);
+        CheckBox chxFalseCaretFalseNo = (CheckBox) findViewById(R.id.chxFalseCaretFalseNo);
+
+
         // On Click Listener for manual changing
         chxHealthyYes.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
 
         // True and True
 
+        //boolean expresion
         boolean trueAndTrue = (true && true);
 
         /*
@@ -194,11 +222,98 @@ public class MainActivity extends AppCompatActivity {
 
         boolean falseOrTrue = (false || true);
 
+        /*
         if (falseOrTrue){
             chxFalseOrTrueYes.setChecked(true);
         }else if(!falseOrTrue){
             chxFalseOrTrueNo.setChecked(true);
         }
+        */
+
+        chxFalseOrTrueYes.setChecked((falseOrTrue ? true : false));
+        chxFalseOrTrueNo.setChecked((!falseOrTrue ? true : false));
+
+        //False Or False
+
+        boolean falseOrFalse = (false || false);
+
+        /*
+        if (falseOrFalse){
+            chxFalseOrFalseYes.setChecked(true);
+        }else if(!falseOrFalse){
+            chxFalseOrFalseNo.setChecked(true);
+        }
+        */
+
+        chxFalseOrFalseYes.setChecked((falseOrFalse ? true : false));
+        chxFalseOrFalseNo.setChecked((!falseOrFalse ? true : false));
+
+
+        // True ^ True
+
+        /*
+        Caret works only if both sides are diferent with true ^ true will produce false
+        and if they are true and false or false and true it will give true value
+        */
+
+        boolean trueCaretTrue = (true ^ true);
+
+        /*
+        if (trueCaretTrue){
+            chxTrueCaretTrueYes.setChecked(true);
+        }else if (!trueCaretTrue){
+            chxTrueCaretTrueNo.setChecked(true);
+        }
+        */
+
+        chxTrueCaretTrueYes.setChecked((trueCaretTrue ? true : false));
+        chxTrueCaretTrueNo.setChecked((!trueCaretTrue ? true : false));
+
+
+        //True ^ False
+
+        boolean trueCaretFalse = (true ^ false);
+
+        /*
+        if (trueCaretFalse){
+            chxTrueCaretFalseYes.setChecked(true);
+        }else if (!trueCaretFalse){
+            chxTrueCaretFalseNo.setChecked(true);
+        }
+        */
+
+        chxTrueCaretFalseYes.setChecked((trueCaretFalse ? true : false));
+        chxTrueCaretFalseNo.setChecked((!trueCaretFalse ? true : false));
+
+        //False ^ True
+
+        boolean falseCaretTrue = (false ^ true);
+
+        /*
+        if (falseCaretTrue){
+            chxFalseCaretTrueYes.setChecked(true);
+        }else if (!falseCaretTrue){
+            chxFalseCaretTrueNo.setChecked(true);
+        }
+        */
+
+        chxFalseCaretTrueYes.setChecked((falseCaretTrue ? true : false));
+        chxFalseCaretTrueNo.setChecked((!falseCaretTrue ? true : false));
+
+        //False ^ False
+
+        boolean falseCaretFalse = (false ^ false);
+
+        /*
+        if (falseCaretFalse){
+            chxFalseCaretFalseYes.setChecked(true);
+        }else if (!falseCaretFalse){
+            chxFalseCaretFalseNo.setChecked(true);
+        }
+        */
+
+        chxFalseCaretFalseYes.setChecked((falseCaretFalse ? true : false));
+        chxFalseCaretFalseNo.setChecked((!falseCaretFalse ? true : false));
 
 
     }

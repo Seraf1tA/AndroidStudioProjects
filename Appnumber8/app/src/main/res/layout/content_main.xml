@@ -22,61 +22,54 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:gravity="center"
+            android:gravity="center_horizontal"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txtHealthy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
                 android:layout_weight="1"
                 android:text="Am I Healthy ?"
+                android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <CheckBox
                 android:id="@+id/chxHealthyYes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
                 android:layout_weight="1"
-                android:text="Yes   " />
+                android:text="Yes   "
+                android:textAlignment="viewStart" />
 
             <CheckBox
                 android:id="@+id/chxHealthyNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
                 android:layout_weight="1"
-                android:text="No   " />
+                android:text="No   "
+                android:textAlignment="viewStart" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center"
+            android:gravity="center_horizontal"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txtTrueAndTrue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
                 android:layout_weight="1"
                 android:text="True and True"
+                android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <CheckBox
                 android:id="@+id/chxTrueAndTrueYes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
                 android:layout_weight="1"
                 android:text="Yes"
                 android:textAlignment="viewStart" />
@@ -85,35 +78,30 @@
                 android:id="@+id/chxTrueAndTrueNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
                 android:layout_weight="1"
-                android:text="No" />
+                android:text="No"
+                android:textAlignment="viewStart" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center"
+            android:gravity="center_horizontal"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txtTrueAndFalse"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
                 android:layout_weight="1"
                 android:text="True and False"
+                android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <CheckBox
                 android:id="@+id/chxTrueAndFalseYes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
                 android:layout_weight="1"
                 android:text="Yes"
                 android:textAlignment="viewStart" />
@@ -122,36 +110,31 @@
                 android:id="@+id/chxTrueAndFalseNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
                 android:layout_weight="1"
-                android:text="No" />
+                android:text="No"
+                android:textAlignment="viewStart" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center"
+            android:gravity="center_horizontal"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txtFalseAndTrue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
                 android:layout_weight="1"
                 android:text="False And True"
+                android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <CheckBox
                 android:id="@+id/chxFalseAndTrueYes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
                 android:layout_weight="1"
                 android:text="Yes"
                 android:textAlignment="viewStart" />
@@ -160,35 +143,30 @@
                 android:id="@+id/chxFalseAndTrueNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
                 android:layout_weight="1"
-                android:text="No" />
+                android:text="No"
+                android:textAlignment="viewStart" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center"
+            android:gravity="center_horizontal"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txtFalseAndFalse"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
                 android:layout_weight="1"
                 android:text="False and False"
+                android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <CheckBox
                 android:id="@+id/chxFalseAndFalseYes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
                 android:layout_weight="1"
                 android:text="Yes"
                 android:textAlignment="viewStart" />
@@ -197,81 +175,133 @@
                 android:id="@+id/chxFalseAndFalseNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
                 android:layout_weight="1"
-                android:text="No" />
+                android:text="No"
+                android:textAlignment="viewStart" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center"
+            android:gravity="center_horizontal"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txtTrueOrTrue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
                 android:layout_weight="1"
                 android:text="True Or True"
+                android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <CheckBox
                 android:id="@+id/chxTrueOrTrueYes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
                 android:layout_weight="1"
-                android:text="Yes" />
+                android:text="Yes"
+                android:textAlignment="viewStart" />
 
             <CheckBox
                 android:id="@+id/chxTrueOrTrueNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
                 android:layout_weight="1"
-                android:text="No" />
+                android:text="No"
+                android:textAlignment="viewStart" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center"
+            android:gravity="center_horizontal"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txtTrueOrFalse"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
                 android:layout_weight="1"
                 android:text="True Or False"
+                android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <CheckBox
                 android:id="@+id/chxTrueOrFalseYes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
                 android:layout_weight="1"
-                android:text="Yes" />
+                android:text="Yes"
+                android:textAlignment="viewStart" />
 
             <CheckBox
                 android:id="@+id/chxTrueOrFalseNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
+                android:layout_weight="1"
+                android:text="No"
+                android:textAlignment="viewStart" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtFalseOrTrue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="False Or True"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <CheckBox
+                android:id="@+id/chxFalseOrTrueYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Yes"
+                android:textAlignment="viewStart" />
+
+            <CheckBox
+                android:id="@+id/chxFalseOrTrueNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No"
+                android:textAlignment="viewStart" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtFalseOrFalse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="False Or False"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <CheckBox
+                android:id="@+id/chxFalseOrFalseYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Yes" />
+
+            <CheckBox
+                android:id="@+id/chxFalseOrFalseNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
         </LinearLayout>
@@ -279,35 +309,113 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal|center"
+            android:gravity="center_horizontal"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/txtFalseOrTrue"
+                android:id="@+id/txtTrueCaretTrue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
                 android:layout_weight="1"
-                android:text="False Or True"
+                android:text="True ^ True"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <CheckBox
-                android:id="@+id/chxFalseOrTrueYes"
+                android:id="@+id/chxTrueCaretTrueYes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <CheckBox
-                android:id="@+id/chxFalseOrTrueNo"
+                android:id="@+id/chxTrueCaretTrueNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
+                android:layout_weight="1"
+                android:text="No" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtTrueCaretFalse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="True ^ False"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <CheckBox
+                android:id="@+id/chxTrueCaretFalseYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Yes" />
+
+            <CheckBox
+                android:id="@+id/chxTrueCaretFalseNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtFalseCaretTrue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="False ^ True"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <CheckBox
+                android:id="@+id/chxFalseCaretTrueYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Yes" />
+
+            <CheckBox
+                android:id="@+id/chxFalseCaretTrueNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtFalseCaretFalse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="False ^ False"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <CheckBox
+                android:id="@+id/chxFalseCaretFalseYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Yes" />
+
+            <CheckBox
+                android:id="@+id/chxFalseCaretFalseNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
         </LinearLayout>
