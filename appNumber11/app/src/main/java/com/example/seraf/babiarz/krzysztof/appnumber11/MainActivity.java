@@ -1,13 +1,9 @@
 package com.example.seraf.babiarz.krzysztof.appnumber11;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -79,12 +75,20 @@ public class MainActivity extends AppCompatActivity {
 
         makeImgDiceInvisible();
 
+        /*
         txtGameStatus.setText("");
         txtCalculations.setText("");
+        */
 
         imgDice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if (firstTime){
+                    txtGameStatus.setText("");
+                    txtCalculations.setText("");
+                    firstTime = false;
+                }
 
                 if (gameStatus == Status.NOTSTARTEDYET){
 
@@ -111,17 +115,20 @@ public class MainActivity extends AppCompatActivity {
                             makebtnRestartVisible();
                             break;
 
+                        /*
                         case 4:
                         case 5:
                         case 6:
                         case 8:
                         case 9:
                         case 10:
+                        */
+                        default:
                             gameStatus = Status.PROCEED;
                             points = diceSum;
-                            txtCalculations.setText(oldCalculations + "Your Points is: " +points + "/n");
-                            txtGameStatus.setText();
-                            oldCalculations = "Your Point is " + points + "/n";
+                            txtCalculations.setText(oldCalculations + "Your Points is: " + points + "\n");
+                            txtGameStatus.setText("Continiu the Game!");
+                            oldCalculations = "Your Point is: " + points + "\n";
                             break;
 
 
@@ -130,6 +137,39 @@ public class MainActivity extends AppCompatActivity {
                     return;
 
                 }
+
+                if (gameStatus == Status.PROCEED){
+
+                    int diceSum = letsRollTheDice();
+                    if (diceSum == points){
+
+                        gameStatus = Status.WON;
+                        txtGameStatus.setText("You Won!");
+                        makeImgDiceInvisible();
+                        makebtnRestartVisible();
+
+                    }else if (diceSum == CEVEN) {
+                        gameStatus = Status.LOST;
+                        txtGameStatus.setText("You Lost");
+                        makeImgDiceInvisible();
+                        makebtnRestartVisible();
+                    }
+
+                }
+
+            }
+        });
+
+        btnRestartGame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                gameStatus = Status.NOTSTARTEDYET;
+                txtGameStatus.setText("");
+                txtCalculations.setText("");
+                oldCalculations = "";
+                makeImgDiceVisible();
+                makeBtnRestartInvisible();
 
             }
         });
@@ -169,6 +209,7 @@ public class MainActivity extends AppCompatActivity {
         txtCalculations.setText(String.format(oldCalculations + "You Rolled %d + %d = %d%n",
                 randDie1, randDie2, sum));
 
+        return sum;
     }
 
 
