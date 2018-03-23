@@ -76,8 +76,8 @@
 
                 <TextView
                     android:id="@+id/txtDice2"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large" />
             </LinearLayout>
         </LinearLayout>
@@ -109,8 +109,8 @@
 
                 <TextView
                     android:id="@+id/txtDice3"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large" />
             </LinearLayout>
         </LinearLayout>
