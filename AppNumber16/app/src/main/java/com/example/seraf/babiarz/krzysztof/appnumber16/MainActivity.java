@@ -16,6 +16,8 @@ import java.security.SecureRandom;
 
 public class MainActivity extends AppCompatActivity {
 
+    boolean firstTime = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,15 +51,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                for(int times = 0; times < 500000; times++){
+                if (firstTime){
+                    for(int times = 0; times < 500000; times++){
 
-                    int rendNum = 1 + secRand.nextInt(6);
-                    ++occurence[rendNum];
+                        int rendNum = 1 + secRand.nextInt(6);
+                        ++occurence[rendNum];
 
-                }
+                    }
 
-                for (int faceNum = 1; faceNum < occurence.length; faceNum++){
+                    for (int faceNum = 1; faceNum < occurence.length; faceNum++){
 
+                    /*
                     if (faceNum == 1){
                         txtDice1.setText(occurence[faceNum] + "");
                     }else if (faceNum == 2){
@@ -71,14 +75,64 @@ public class MainActivity extends AppCompatActivity {
                     }else if (faceNum == 6){
                         txtDice6.setText(occurence[faceNum] + "");
                     }
+                    */
 
+                    /*
+                    switch (faceNum){
+
+                        case 1:
+                            txtDice1.setText(occurence[faceNum] + "");
+                        case 2:
+                            txtDice2.setText(occurence[faceNum] + "");
+                        case 3:
+                            txtDice3.setText(occurence[faceNum] + "");
+                        case 4:
+                            txtDice4.setText(occurence[faceNum] + "");
+                        case 5:
+                            txtDice5.setText(occurence[faceNum] + "");
+                        case 6:
+                            txtDice6.setText(occurence[faceNum] + "");
+
+                    }
+                    */
+
+                        switch (faceNum){
+
+                            case 1:
+                                putTheRightValue(txtDice1, occurence, faceNum);
+                                break;
+                            case 2:
+                                putTheRightValue(txtDice2, occurence, faceNum);
+                                break;
+                            case 3:
+                                putTheRightValue(txtDice3, occurence, faceNum);
+                                break;
+                            case 4:
+                                putTheRightValue(txtDice4, occurence, faceNum);
+                                break;
+                            case 5:
+                                putTheRightValue(txtDice5, occurence, faceNum);
+                                break;
+                            case 6:
+                                putTheRightValue(txtDice6, occurence, faceNum);
+                                break;
+
+                        }
+
+                    }
+                    firstTime = false;
                 }
-
             }
         });
 
 
     }
 
+
+    private void putTheRightValue(TextView txtDiceNumber, int[] occurance, int index){
+
+        txtDiceNumber.setText(occurance[index] + "");
+
+    }
 
 }
