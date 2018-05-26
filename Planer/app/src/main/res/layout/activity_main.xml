@@ -33,7 +33,7 @@
                     android:layout_weight="125"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000" />
+                    android:textColor="#000" />
 
                 <TextView
                     android:id="@+id/txtMon"
@@ -41,9 +41,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text="Mon"
-                    android:textColor="#FFF"
+                    android:textColor="#1f2421"
                     android:textStyle="bold|italic" />
 
                 <TextView
@@ -52,9 +53,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text="Tue"
-                    android:textColor="#FFF"
+                    android:textColor="#1f2421"
                     android:textStyle="bold|italic" />
 
                 <TextView
@@ -63,9 +65,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text="Wed"
-                    android:textColor="#FFF"
+                    android:textColor="#1f2421"
                     android:textStyle="bold|italic" />
 
                 <TextView
@@ -74,9 +77,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text="Thu"
-                    android:textColor="#FFF"
+                    android:textColor="#1f2421"
                     android:textStyle="bold|italic" />
 
                 <TextView
@@ -85,9 +89,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text="Fri"
-                    android:textColor="#FFF"
+                    android:textColor="#1f2421"
                     android:textStyle="bold|italic" />
 
                 <TextView
@@ -96,9 +101,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text="Sat"
-                    android:textColor="#FFF"
+                    android:textColor="#1f2421"
                     android:textStyle="bold|italic" />
 
                 <TextView
@@ -107,9 +113,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text="Sun"
-                    android:textColor="#FFF"
+                    android:textColor="#1f2421"
                     android:textStyle="bold|italic" />
 
             </TableRow>
@@ -119,94 +126,133 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="5dp"
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center_vertical|center_horizontal|center"
                     android:text="Task 1"
-                    android:textColor="#fff"
+                    android:textColor="#1f2421"
                     android:textStyle="bold" />
 
-                <TextView
+                <EditText
                     android:id="@+id/row1_1"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"
                     android:text=""
-                    android:textColor="#000000"
+                    android:textColor="#1f2421"
+                    android:textIsSelectable="true"
+                    android:textSize="10sp"
                     android:textStyle="italic" />
 
-                <TextView
+                <EditText
                     android:id="@+id/row1_2"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:gravity="center"
+                    android:selectAllOnFocus="true"
                     android:text=""
-                    android:textColor="#000000"
+                    android:textColor="#1f2421"
+                    android:textIsSelectable="true"
+                    android:textSize="10sp"
                     android:textStyle="italic" />
 
-                <TextView
+                <EditText
                     android:id="@+id/row1_3"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row1_4"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row1_5"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row1_6"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row1_7"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
             </TableRow>
 
@@ -215,94 +261,131 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="5dp"
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center_vertical|center_horizontal|center"
                     android:text="Task 2"
-                    android:textColor="#fff"
+                    android:textColor="#1f2421"
                     android:textStyle="bold" />
 
-                <TextView
+                <EditText
                     android:id="@+id/row2_1"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row2_2"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row2_3"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row2_4"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row2_5"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row2_6"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row2_7"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
             </TableRow>
 
@@ -311,94 +394,131 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="5dp"
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center_vertical|center_horizontal|center"
                     android:text="Task 3"
-                    android:textColor="#fff"
+                    android:textColor="#1f2421"
                     android:textStyle="bold|italic" />
 
-                <TextView
+                <EditText
                     android:id="@+id/row3_1"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row3_2"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row3_3"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row3_4"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row3_5"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row3_6"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row3_7"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
             </TableRow>
 
@@ -407,94 +527,131 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="5dp"
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center_vertical|center_horizontal|center"
                     android:text="Task 4"
-                    android:textColor="#fff"
+                    android:textColor="#1f2421"
                     android:textStyle="bold|italic" />
 
-                <TextView
+                <EditText
                     android:id="@+id/row4_1"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row4_2"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row4_3"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row4_4"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row4_5"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true" />
 
-                <TextView
+                <EditText
                     android:id="@+id/row4_6"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true" />
 
-                <TextView
+                <EditText
                     android:id="@+id/row4_7"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true" />
 
             </TableRow>
 
@@ -503,94 +660,131 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="5dp"
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center_vertical|center_horizontal|center"
                     android:text="Task 5"
-                    android:textColor="#fff"
+                    android:textColor="#1f2421"
                     android:textStyle="bold" />
 
-                <TextView
+                <EditText
                     android:id="@+id/row5_1"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row5_2"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row5_3"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true" />
 
-                <TextView
+                <EditText
                     android:id="@+id/row5_4"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row5_5"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row5_6"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row5_7"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
             </TableRow>
 
@@ -599,94 +793,131 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="5dp"
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center_vertical|center_horizontal|center"
                     android:text="Task 6"
-                    android:textColor="#fff"
+                    android:textColor="#1f2421"
                     android:textStyle="bold" />
 
-                <TextView
+                <EditText
                     android:id="@+id/row6_1"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row6_2"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true" />
 
-                <TextView
+                <EditText
                     android:id="@+id/row6_3"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true" />
 
-                <TextView
+                <EditText
                     android:id="@+id/row6_4"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row6_5"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true" />
 
-                <TextView
+                <EditText
                     android:id="@+id/row6_6"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true" />
 
-                <TextView
+                <EditText
                     android:id="@+id/row6_7"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
             </TableRow>
 
@@ -695,94 +926,131 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="5dp"
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center_vertical|center_horizontal|center"
                     android:text="Task 7"
-                    android:textColor="#fff"
+                    android:textColor="#1f2421"
                     android:textStyle="bold" />
 
-                <TextView
+                <EditText
                     android:id="@+id/row7_1"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
-                    android:gravity="center"
+                    android:background="#dce1de"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:gravity="center"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row7_2"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true" />
 
-                <TextView
+                <EditText
                     android:id="@+id/row7_3"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true" />
 
-                <TextView
+                <EditText
                     android:id="@+id/row7_4"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row7_5"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row7_6"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/row7_7"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_margin="1dp"
                     android:layout_weight="125"
+                    android:background="#dce1de"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="#000000"
-                    android:textStyle="italic" />
+                    android:textColor="#1f2421"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:selectAllOnFocus="true"/>
 
             </TableRow>
 
@@ -800,33 +1068,22 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom="25dp"
         android:layout_marginLeft="46dp"
-        android:textColor="#FFF"
+        android:textColor="#dce1de"
         android:textStyle="bold|italic" />
 
     <Button
-        android:id="@+id/btnAddTask"
+        android:id="@+id/btnRight"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="13dp"
-        android:background="@drawable/bg_calen"
-        android:text="Add Task"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_alignBaseline="@+id/txtDate"
+        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="11dp"
-        android:background="@drawable/bg_calen"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Write your text here"
-        android:inputType="text"
-        android:padding="10dp" />
+        android:layout_marginRight="21dp"
+        android:layout_marginEnd="21dp"
+        android:text="Move to right"
+        android:textSize="12sp" />
+
+
 
 
 </RelativeLayout>

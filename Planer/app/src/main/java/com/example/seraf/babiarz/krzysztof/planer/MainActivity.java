@@ -1,8 +1,13 @@
 package com.example.seraf.babiarz.krzysztof.planer;
 
+import android.accessibilityservice.AccessibilityService;
 import android.app.Activity;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -13,17 +18,15 @@ import java.util.Calendar;
 public class MainActivity extends Activity {
 
 
-    private String edtText;
 
-    EditText editText;
+    Button btnRight;
 
-    Button btnAddTask;
-
-    TextView txtDate, row1_1, row1_2, row1_3, row1_4, row1_5, row1_6, row1_7, row2_1, row2_2,
+    TextView txtDate, txtVie, row1_1, row1_2, row1_3, row1_4, row1_5, row1_6, row1_7, row2_1, row2_2,
             row2_3, row2_4, row2_5, row2_6, row2_7, row3_1, row3_2, row3_3, row3_4, row3_5, row3_6,
             row3_7, row4_1, row4_2, row4_3, row4_4, row4_5, row4_6, row4_7, row5_1, row5_2, row5_3,
             row5_4, row5_5, row5_6, row5_7, row6_1, row6_2, row6_3, row6_4, row6_5, row6_6, row6_7,
             row7_1, row7_2, row7_3, row7_4, row7_5, row7_6, row7_7;
+
 
 
     @Override
@@ -39,17 +42,6 @@ public class MainActivity extends Activity {
 
 
 
-        btnAddTask.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                edtText = editText.getText().toString();
-                row1_1.setText(edtText);
-
-            }
-        });
-
-
     }
 
 
@@ -57,13 +49,13 @@ public class MainActivity extends Activity {
     private void initialize() {
 
         // Add Button
-        btnAddTask = (Button) findViewById(R.id.btnAddTask);
+
+        btnRight = (Button) findViewById(R.id.btnRight);
+
 
         // Show current date
         txtDate = (TextView) findViewById(R.id.txtDate);
 
-        // Text to add tasks
-        editText = (EditText) findViewById(R.id.editText);
 
         // row 1
         row1_1 = (TextView) findViewById(R.id.row1_1);
@@ -129,6 +121,7 @@ public class MainActivity extends Activity {
         row7_7 = (TextView) findViewById(R.id.row7_7);
 
     }
+
 
 }
 
