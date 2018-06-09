@@ -11,10 +11,11 @@ import android.widget.TextView;
 import java.text.DateFormat;
 import java.util.Calendar;
 
-public class MainActivity extends Activity{
+public class MainActivity extends Activity implements View.OnClickListener{
 
     TableLayout tLay;
     String textFromEditText;
+
     Button btnMove;
     TableRow tRow1, tRow2, tRow3, tRow4, tRow5, tRow6, tRow7;
 
@@ -32,18 +33,101 @@ public class MainActivity extends Activity{
         initialize();
         getDate();
 
+        row1_1.setOnClickListener(this);
+        row1_2.setOnClickListener(this);
+        row1_3.setOnClickListener(this);
+        row1_4.setOnClickListener(this);
+        row1_5.setOnClickListener(this);
+        row1_6.setOnClickListener(this);
+        row1_7.setOnClickListener(this);
+        /*row2_1.setOnClickListener(this);
+        row2_2.setOnClickListener(this);
+        row2_3.setOnClickListener(this);
+        row2_4.setOnClickListener(this);
+        row2_5.setOnClickListener(this);
+        row2_6.setOnClickListener(this);
+        row2_7.setOnClickListener(this);*/
 
+    }
 
+    @Override
+    public void onClick(View v) {
 
-        btnMove.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                getChildCount();
+        switch (v.getId()){
+            case R.id.row1_1:
+                textFromEditText = row1_1.getText().toString();
+                row1_2.setText(textFromEditText);
+                row1_1.setText("");
+                break;
+            case R.id.row1_2:
+                textFromEditText = row1_2.getText().toString();
+                row1_3.setText(textFromEditText);
+                row1_2.setText("");
+                break;
+            case R.id.row1_3:
+                textFromEditText = row1_3.getText().toString();
+                row1_4.setText(textFromEditText);
+                row1_3.setText("");
+                break;
+            case R.id.row1_4:
+                textFromEditText = row1_4.getText().toString();
+                row1_5.setText(textFromEditText);
+                row1_4.setText("");
+                break;
+            case R.id.row1_5:
+                textFromEditText = row1_5.getText().toString();
+                row1_6.setText(textFromEditText);
+                row1_5.setText("");
+                break;
+            case R.id.row1_6:
+                textFromEditText = row1_6.getText().toString();
                 row1_7.setText(textFromEditText);
+                row1_6.setText("");
+                break;
+            case R.id.row1_7:
+                textFromEditText = row1_7.getText().toString();
+                row1_1.setText(textFromEditText);
+                row1_7.setText("");
+                break;
+           /* case R.id.row2_1:
+                textFromEditText= row2_1.getText().toString();
+                row2_2.setText(textFromEditText);
+                row2_1.setText("");
+            case R.id.row2_2:
+                textFromEditText = row2_2.getText().toString();
+                row2_3.setText(textFromEditText);
+                row2_2.setText("");
+            case R.id.row2_3:
+                textFromEditText= row2_3.getText().toString();
+                row2_4.setText(textFromEditText);
+                row2_3.setText("");
+            case R.id.row2_4:
+                textFromEditText= row2_4.getText().toString();
+                row2_5.setText(textFromEditText);
+                row2_4.setText("");
+            case R.id.row2_5:
+                textFromEditText= row2_5.getText().toString();
+                row2_6.setText(textFromEditText);
+                row2_5.setText("");
+            case R.id.row2_6:
+                textFromEditText= row2_6.getText().toString();
+                row2_7.setText(textFromEditText);
+                row2_6.setText("");
+            case R.id.row2_7:
+                textFromEditText= row2_7.getText().toString();
+                row2_2.setText(textFromEditText);
+                row2_7.setText("");*/
 
-            }
-        });
+        }
+
+    }
+
+
+    private void getDate(){
+
+        Calendar calendar = Calendar.getInstance();
+        String currentDate = DateFormat.getDateInstance(DateFormat.FULL).format(calendar.getTime());
+        txtDate.setText(currentDate);
 
     }
 
@@ -130,35 +214,5 @@ public class MainActivity extends Activity{
         row7_7 = (TextView) findViewById(R.id.row7_7);
 
     }
-
-    public void getChildCount() {
-
-        int tableChildrens = tLay.getChildCount();
-        if (tLay != null){
-            for (int i = 0; i < tableChildrens; i++) {
-                View viewChild = tLay.getChildAt(7);
-                if (viewChild instanceof TableRow) {
-                    int childrensAtRow1 = tRow1.getChildCount();
-                    for (int j = 0; j < childrensAtRow1 + 1; j++) {
-                        View viewChild2 = tRow1.getVirtualChildAt(2);
-                        if (viewChild2 instanceof TextView) {
-                            textFromEditText = ((TextView) viewChild2).getText().toString();
-
-                        }
-                    }
-                }
-            }
-        }
-
-    }
-
-    private void getDate(){
-
-        Calendar calendar = Calendar.getInstance();
-        String currentDate = DateFormat.getDateInstance(DateFormat.FULL).format(calendar.getTime());
-        txtDate.setText(currentDate);
-
-    }
-
 }
 
