@@ -1,9 +1,15 @@
 package com.example.seraf.babiarz.krzysztof.planer;
 
 import android.app.Activity;
+import android.content.ClipData;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Point;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.DragEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -11,12 +17,10 @@ import android.widget.TextView;
 import java.text.DateFormat;
 import java.util.Calendar;
 
-public class MainActivity extends Activity implements View.OnClickListener{
+public class MainActivity extends Activity {
 
     TableLayout tLay;
-    String textFromEditText;
 
-    Button btnMove;
     TableRow tRow1, tRow2, tRow3, tRow4, tRow5, tRow6, tRow7;
 
     TextView txtDate, row1_1, row1_2, row1_3, row1_4, row1_5, row1_6, row1_7, row2_1, row2_2,
@@ -33,97 +37,96 @@ public class MainActivity extends Activity implements View.OnClickListener{
         initialize();
         getDate();
 
-        row1_1.setOnClickListener(this);
-        row1_2.setOnClickListener(this);
-        row1_3.setOnClickListener(this);
-        row1_4.setOnClickListener(this);
-        row1_5.setOnClickListener(this);
-        row1_6.setOnClickListener(this);
-        row1_7.setOnClickListener(this);
-        /*row2_1.setOnClickListener(this);
-        row2_2.setOnClickListener(this);
-        row2_3.setOnClickListener(this);
-        row2_4.setOnClickListener(this);
-        row2_5.setOnClickListener(this);
-        row2_6.setOnClickListener(this);
-        row2_7.setOnClickListener(this);*/
+
+        findViewById(R.id.row1_1).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row1_1).setOnDragListener(DropListener);
+        findViewById(R.id.row1_2).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row1_2).setOnDragListener(DropListener);
+        findViewById(R.id.row1_3).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row1_3).setOnDragListener(DropListener);
+        findViewById(R.id.row1_4).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row1_4).setOnDragListener(DropListener);
+        findViewById(R.id.row1_5).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row1_5).setOnDragListener(DropListener);
+        findViewById(R.id.row1_6).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row1_6).setOnDragListener(DropListener);
+        findViewById(R.id.row1_7).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row1_7).setOnDragListener(DropListener);
+
+
 
     }
 
-    @Override
-    public void onClick(View v) {
+    View.OnDragListener DropListener = new View.OnDragListener() {
+        @Override
+        public boolean onDrag(View v, DragEvent event) {
+            int dragEvent = event.getAction();
 
-        switch (v.getId()){
-            case R.id.row1_1:
-                textFromEditText = row1_1.getText().toString();
-                row1_2.setText(textFromEditText);
-                row1_1.setText("");
-                break;
-            case R.id.row1_2:
-                textFromEditText = row1_2.getText().toString();
-                row1_3.setText(textFromEditText);
-                row1_2.setText("");
-                break;
-            case R.id.row1_3:
-                textFromEditText = row1_3.getText().toString();
-                row1_4.setText(textFromEditText);
-                row1_3.setText("");
-                break;
-            case R.id.row1_4:
-                textFromEditText = row1_4.getText().toString();
-                row1_5.setText(textFromEditText);
-                row1_4.setText("");
-                break;
-            case R.id.row1_5:
-                textFromEditText = row1_5.getText().toString();
-                row1_6.setText(textFromEditText);
-                row1_5.setText("");
-                break;
-            case R.id.row1_6:
-                textFromEditText = row1_6.getText().toString();
-                row1_7.setText(textFromEditText);
-                row1_6.setText("");
-                break;
-            case R.id.row1_7:
-                textFromEditText = row1_7.getText().toString();
-                row1_1.setText(textFromEditText);
-                row1_7.setText("");
-                break;
-           /* case R.id.row2_1:
-                textFromEditText= row2_1.getText().toString();
-                row2_2.setText(textFromEditText);
-                row2_1.setText("");
-            case R.id.row2_2:
-                textFromEditText = row2_2.getText().toString();
-                row2_3.setText(textFromEditText);
-                row2_2.setText("");
-            case R.id.row2_3:
-                textFromEditText= row2_3.getText().toString();
-                row2_4.setText(textFromEditText);
-                row2_3.setText("");
-            case R.id.row2_4:
-                textFromEditText= row2_4.getText().toString();
-                row2_5.setText(textFromEditText);
-                row2_4.setText("");
-            case R.id.row2_5:
-                textFromEditText= row2_5.getText().toString();
-                row2_6.setText(textFromEditText);
-                row2_5.setText("");
-            case R.id.row2_6:
-                textFromEditText= row2_6.getText().toString();
-                row2_7.setText(textFromEditText);
-                row2_6.setText("");
-            case R.id.row2_7:
-                textFromEditText= row2_7.getText().toString();
-                row2_2.setText(textFromEditText);
-                row2_7.setText("");*/
+            switch (dragEvent) {
+                case DragEvent.ACTION_DRAG_ENTERED:
+                    Log.i("Drag Event", "Entered");
+                    break;
 
+                case DragEvent.ACTION_DRAG_EXITED:
+                    Log.i("Drag Event", "Exited");
+                    break;
+
+                case DragEvent.ACTION_DROP:
+                    TextView target = (TextView) v;
+                    TextView dragged = (TextView) event.getLocalState();
+                    target.setText((CharSequence) dragged.getText());
+                    dragged.setText("");
+                    break;
+
+            }
+            return true;
+        }
+    };
+
+    View.OnLongClickListener longClickListener = new View.OnLongClickListener() {
+        @Override
+        public boolean onLongClick(View v) {
+
+            ClipData data = ClipData.newPlainText("", "");
+            DragShadow dragShadow = new DragShadow(v);
+
+            v.startDrag(data, dragShadow, v, 0);
+            return true;
+        }
+    };
+
+    private class DragShadow extends View.DragShadowBuilder {
+
+        ColorDrawable greyBox;
+
+        public DragShadow(View view) {
+            super(view);
+            greyBox = new ColorDrawable(Color.LTGRAY);
+        }
+
+        /*canvas is area of the shadow  need to read more about it*/
+        @Override
+        public void onDrawShadow(Canvas canvas) {
+            greyBox.draw(canvas);
+        }
+
+        @Override
+        public void onProvideShadowMetrics(Point outShadowSize, Point outShadowTouchPoint) {
+            View v = getView();
+
+            /*create how big shadow is and where is it center when touch*/
+            int height = (int) v.getHeight() / 2;
+            int width = (int) v.getWidth() / 2;
+
+            greyBox.setBounds(0, 0, width, height);
+
+            outShadowSize.set(width, height);
+            outShadowTouchPoint.set(width / 2, height / 2);
         }
 
     }
 
-
-    private void getDate(){
+    private void getDate() {
 
         Calendar calendar = Calendar.getInstance();
         String currentDate = DateFormat.getDateInstance(DateFormat.FULL).format(calendar.getTime());
@@ -136,8 +139,6 @@ public class MainActivity extends Activity implements View.OnClickListener{
         // Table layout
         tLay = (TableLayout) findViewById(R.id.tLay);
 
-        // Button Move
-        btnMove = (Button) findViewById(R.id.btnMove);
 
         // Show current date
         txtDate = (TextView) findViewById(R.id.txtDate);
@@ -214,5 +215,11 @@ public class MainActivity extends Activity implements View.OnClickListener{
         row7_7 = (TextView) findViewById(R.id.row7_7);
 
     }
+
 }
+
+
+
+
+
 
