@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -18,7 +17,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:shrinkColumns="false"
-            android:stretchColumns="false">
+            android:stretchColumns="false"
+            tools:ignore="UselessParent">
 
             <TableRow
                 android:id="@+id/tRowWeekDays"
@@ -44,7 +44,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
-                    android:text="Mon"
+                    android:text="@string/mon"
                     android:textColor="#1f2421"
                     android:textStyle="bold|italic" />
 
@@ -56,7 +56,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
-                    android:text="Tue"
+                    android:text="@string/tue"
                     android:textColor="#1f2421"
                     android:textStyle="bold|italic" />
 
@@ -68,7 +68,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
-                    android:text="Wed"
+                    android:text="@string/wed"
                     android:textColor="#1f2421"
                     android:textStyle="bold|italic" />
 
@@ -80,7 +80,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
-                    android:text="Thu"
+                    android:text="@string/thu"
                     android:textColor="#1f2421"
                     android:textStyle="bold|italic" />
 
@@ -92,7 +92,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
-                    android:text="Fri"
+                    android:text="@string/fri"
                     android:textColor="#1f2421"
                     android:textStyle="bold|italic" />
 
@@ -104,7 +104,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
-                    android:text="Sat"
+                    android:text="@string/sat"
                     android:textColor="#1f2421"
                     android:textStyle="bold|italic" />
 
@@ -116,7 +116,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
-                    android:text="Sun"
+                    android:text="@string/sun"
                     android:textColor="#1f2421"
                     android:textStyle="bold|italic" />
 
@@ -137,7 +137,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center_vertical|center_horizontal|center"
-                    android:text="Task 1"
+                    android:text="@string/task_1"
                     android:textColor="#1f2421"
                     android:textStyle="bold" />
 
@@ -148,10 +148,9 @@
                     android:layout_margin="1dp"
                     android:layout_weight="125"
                     android:background="#dce1de"
-                    android:clickable="true"
                     android:gravity="center"
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -161,10 +160,9 @@
                     android:layout_margin="1dp"
                     android:layout_weight="125"
                     android:background="#dce1de"
-                    android:clickable="true"
                     android:gravity="center"
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -174,11 +172,10 @@
                     android:layout_margin="1dp"
                     android:layout_weight="125"
                     android:background="#dce1de"
-                    android:clickable="true"
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -188,11 +185,10 @@
                     android:layout_margin="1dp"
                     android:layout_weight="125"
                     android:background="#dce1de"
-                    android:clickable="true"
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -202,11 +198,10 @@
                     android:layout_margin="1dp"
                     android:layout_weight="125"
                     android:background="#dce1de"
-                    android:clickable="true"
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -216,11 +211,10 @@
                     android:layout_margin="1dp"
                     android:layout_weight="125"
                     android:background="#dce1de"
-                    android:clickable="true"
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -230,11 +224,10 @@
                     android:layout_margin="1dp"
                     android:layout_weight="125"
                     android:background="#dce1de"
-                    android:clickable="true"
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
             </TableRow>
@@ -254,7 +247,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center_vertical|center_horizontal|center"
-                    android:text="Task 2"
+                    android:text="@string/task_2"
                     android:textColor="#1f2421"
                     android:textStyle="bold" />
 
@@ -268,7 +261,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -281,7 +274,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -294,7 +287,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -307,7 +300,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -320,7 +313,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -333,7 +326,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -346,7 +339,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
             </TableRow>
@@ -366,7 +359,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center_vertical|center_horizontal|center"
-                    android:text="Task 3"
+                    android:text="@string/task_3"
                     android:textColor="#1f2421"
                     android:textStyle="bold|italic" />
 
@@ -380,7 +373,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -393,7 +386,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -406,7 +399,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -419,7 +412,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -432,7 +425,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -445,7 +438,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -458,7 +451,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
             </TableRow>
@@ -478,7 +471,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center_vertical|center_horizontal|center"
-                    android:text="Task 4"
+                    android:text="@string/task_4"
                     android:textColor="#1f2421"
                     android:textStyle="bold|italic" />
 
@@ -492,7 +485,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -505,7 +498,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -518,7 +511,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -531,7 +524,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -544,7 +537,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -557,7 +550,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -570,7 +563,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
             </TableRow>
@@ -590,7 +583,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center_vertical|center_horizontal|center"
-                    android:text="Task 5"
+                    android:text="@string/task_5"
                     android:textColor="#1f2421"
                     android:textStyle="bold" />
 
@@ -604,7 +597,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -617,7 +610,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -630,7 +623,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -643,7 +636,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -656,7 +649,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -669,7 +662,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -682,7 +675,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
             </TableRow>
@@ -702,7 +695,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center_vertical|center_horizontal|center"
-                    android:text="Task 6"
+                    android:text="@string/task_6"
                     android:textColor="#1f2421"
                     android:textStyle="bold" />
 
@@ -716,7 +709,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -729,7 +722,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -742,7 +735,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -755,7 +748,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -768,7 +761,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/row6_6"
@@ -780,7 +773,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -793,7 +786,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
             </TableRow>
@@ -813,7 +806,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center_vertical|center_horizontal|center"
-                    android:text="Task 7"
+                    android:text="@string/task_7"
                     android:textColor="#1f2421"
                     android:textStyle="bold" />
 
@@ -827,7 +820,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -840,7 +833,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -853,7 +846,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -866,7 +859,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -879,7 +872,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -892,7 +885,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -905,7 +898,7 @@
                     android:gravity="center"
                     android:text=""
                     android:textColor="#1f2421"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="italic" />
 
             </TableRow>
@@ -923,13 +916,15 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="25dp"
+        android:layout_marginStart="46dp"
         android:layout_marginLeft="46dp"
         android:textColor="#dce1de"
-        android:textStyle="bold|italic" />
+        android:textStyle="bold|italic"
+        tools:ignore="RelativeOverlap" />
 
     <EditText
         android:id="@+id/edtText"
-        android:layout_width="289dp"
+        android:layout_width="279dp"
         android:layout_height="35dp"
         android:layout_alignBottom="@+id/txtDate"
         android:layout_alignParentEnd="true"
@@ -937,11 +932,10 @@
         android:layout_marginBottom="-2dp"
         android:layout_marginEnd="139dp"
         android:layout_marginRight="139dp"
-        android:autoText="false"
         android:background="@drawable/bg_calen"
         android:ems="10"
-        android:gravity="center"
-        android:inputType="text|textPersonName" />
+        android:inputType="text|textPersonName"
+        tools:ignore="LabelFor" />
 
     <Button
         android:id="@+id/btnAdd"
@@ -954,7 +948,8 @@
         android:layout_marginEnd="23dp"
         android:layout_marginRight="23dp"
         android:background="@drawable/bg_calen"
-        android:text="Add Task" />
+        android:text="@string/add_task"
+        tools:ignore="RelativeOverlap" />
 
 
 </RelativeLayout>
