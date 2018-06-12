@@ -3,12 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
+    android:background="#49a078"
     tools:context=".MyDailyPlanner">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="5dp">
 
         <TableLayout
             android:id="@+id/tLay"
@@ -24,15 +26,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="5dp">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="1dp"
-                    android:layout_weight="125"
-                    android:gravity="center"
-                    android:text=""
-                    android:textColor="#000" />
 
                 <TextView
                     android:id="@+id/txtMon"
@@ -129,18 +122,8 @@
                 android:gravity="center">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="1dp"
-                    android:layout_weight="125"
-                    android:background="#dce1de"
-                    android:gravity="center"
-                    android:text="Task 1"
-                    android:textColor="#1f2421"
-                    android:textStyle="bold" />
-
-                <TextView
                     android:id="@+id/row1_1"
+                    android:saveEnabled="true"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="1dp"
@@ -159,6 +142,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:textColor="#1f2421"
                     android:textSize="12sp"
                     android:textStyle="italic" />
@@ -171,6 +155,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -184,6 +169,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -197,6 +183,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -210,6 +197,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -223,6 +211,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -239,17 +228,6 @@
                 android:gravity="center">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="1dp"
-                    android:layout_weight="125"
-                    android:background="#dce1de"
-                    android:gravity="center"
-                    android:text="Task 2"
-                    android:textColor="#1f2421"
-                    android:textStyle="bold" />
-
-                <TextView
                     android:id="@+id/row2_1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -257,6 +235,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -270,6 +249,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -283,6 +263,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -296,6 +277,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -309,6 +291,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -322,6 +305,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -335,6 +319,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -351,17 +336,6 @@
                 android:gravity="center">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="1dp"
-                    android:layout_weight="125"
-                    android:background="#dce1de"
-                    android:gravity="center"
-                    android:text="Task 3"
-                    android:textColor="#1f2421"
-                    android:textStyle="bold|italic" />
-
-                <TextView
                     android:id="@+id/row3_1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -369,6 +343,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -382,6 +357,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -395,6 +371,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -408,6 +385,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -421,6 +399,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -434,6 +413,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -447,6 +427,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -463,17 +444,6 @@
                 android:gravity="center">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="1dp"
-                    android:layout_weight="125"
-                    android:background="#dce1de"
-                    android:gravity="center"
-                    android:text="Task 4"
-                    android:textColor="#1f2421"
-                    android:textStyle="bold|italic" />
-
-                <TextView
                     android:id="@+id/row4_1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -481,6 +451,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -494,6 +465,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -507,6 +479,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -520,6 +493,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -533,6 +507,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -546,6 +521,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -559,6 +535,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -575,17 +552,6 @@
                 android:gravity="center">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="1dp"
-                    android:layout_weight="125"
-                    android:background="#dce1de"
-                    android:gravity="center"
-                    android:text="Task 5"
-                    android:textColor="#1f2421"
-                    android:textStyle="bold" />
-
-                <TextView
                     android:id="@+id/row5_1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -593,6 +559,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -606,6 +573,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -619,6 +587,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -632,6 +601,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -645,6 +615,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -658,6 +629,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -671,6 +643,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -687,17 +660,6 @@
                 android:gravity="center">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="1dp"
-                    android:layout_weight="125"
-                    android:background="#dce1de"
-                    android:gravity="center"
-                    android:text="Task 6"
-                    android:textColor="#1f2421"
-                    android:textStyle="bold" />
-
-                <TextView
                     android:id="@+id/row6_1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -705,6 +667,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -718,6 +681,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -731,6 +695,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -744,6 +709,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -757,6 +723,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp" />
@@ -769,6 +736,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -782,6 +750,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -798,17 +767,6 @@
                 android:gravity="center">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="1dp"
-                    android:layout_weight="125"
-                    android:background="#dce1de"
-                    android:gravity="center"
-                    android:text="Task 7"
-                    android:textColor="#1f2421"
-                    android:textStyle="bold" />
-
-                <TextView
                     android:id="@+id/row7_1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -816,6 +774,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -829,6 +788,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -842,6 +802,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -855,6 +816,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -868,6 +830,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -881,6 +844,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -894,6 +858,7 @@
                     android:layout_weight="125"
                     android:background="#dce1de"
                     android:gravity="center"
+                    android:saveEnabled="true"
                     android:text=""
                     android:textColor="#1f2421"
                     android:textSize="12sp"
@@ -909,13 +874,13 @@
     <EditText
         android:id="@+id/edtText"
         android:layout_width="200dp"
-        android:layout_height="35dp"
-        android:layout_alignBottom="@+id/txtDate"
-        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnAdd"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="-2dp"
-        android:layout_marginEnd="139dp"
-        android:layout_marginRight="139dp" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="140dp"
+        android:layout_marginEnd="140dp"
+        android:background="#dce1de" />
 
     <Button
         android:id="@+id/btnAdd"
@@ -927,17 +892,18 @@
         android:layout_marginBottom="17dp"
         android:layout_marginEnd="23dp"
         android:layout_marginRight="23dp"
+        android:background="#9cc5a1"
         android:text="Add Task" />
 
     <TextView
         android:id="@+id/txtDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btnAdd"
+        android:layout_alignBaseline="@+id/edtText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="58dp"
-        android:layout_marginStart="58dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginStart="34dp"
         android:textColor="#000"
         android:textStyle="bold|italic" />
 

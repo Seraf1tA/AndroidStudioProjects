@@ -17,10 +17,8 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.text.DateFormat;
-import java.util.Calendar;
-
 public class MyDailyPlanner extends AppCompatActivity {
+
     TableLayout tLay;
 
     TableRow tRow1, tRow2, tRow3, tRow4, tRow5, tRow6, tRow7;
@@ -37,6 +35,8 @@ public class MyDailyPlanner extends AppCompatActivity {
             row5_4, row5_5, row5_6, row5_7, row6_1, row6_2, row6_3, row6_4, row6_5, row6_6, row6_7,
             row7_1, row7_2, row7_3, row7_4, row7_5, row7_6, row7_7;
 
+    String[] textFromTextViews;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +46,21 @@ public class MyDailyPlanner extends AppCompatActivity {
         initialize();
         ClickListeners();
 
+    }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+
+
+
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+
+
+        super.onRestoreInstanceState(savedInstanceState);
     }
 
     View.OnClickListener ClickListener = new View.OnClickListener() {
@@ -243,8 +257,8 @@ public class MyDailyPlanner extends AppCompatActivity {
             View v = getView();
 
             //create how big shadow is and where is it center when touch
-            int height = v.getHeight() / 2;
-            int width = v.getWidth() / 2;
+            int height = v.getHeight();
+            int width = v.getWidth();
 
             greyBox.setBounds(0, 0, width, height);
 
@@ -254,17 +268,11 @@ public class MyDailyPlanner extends AppCompatActivity {
 
     }
 
-    /*private void getDate() {
 
-        Calendar calendar = Calendar.getInstance();
-        String currentDate = DateFormat.getDateInstance(DateFormat.FULL).format(calendar.getTime());
-        txtDate.setText(currentDate);
-
-    }*/
 
     private void initialize() {
 
-        /*// Show current date
+       /* // Show current date
         txtDate = findViewById(R.id.txtDate);*/
 
         // Table layout
@@ -348,3 +356,13 @@ public class MyDailyPlanner extends AppCompatActivity {
 
     }
 }
+
+
+/*
+private void getDate() {
+
+        Calendar calendar = Calendar.getInstance();
+        String currentDate = DateFormat.getDateInstance(DateFormat.FULL).format(calendar.getTime());
+        txtDate.setText(currentDate);
+
+}*/
