@@ -35,7 +35,6 @@ public class MyDailyPlanner extends AppCompatActivity {
             row5_4, row5_5, row5_6, row5_7, row6_1, row6_2, row6_3, row6_4, row6_5, row6_6, row6_7,
             row7_1, row7_2, row7_3, row7_4, row7_5, row7_6, row7_7;
 
-    String[] textFromTextViews;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,16 +48,29 @@ public class MyDailyPlanner extends AppCompatActivity {
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+
+        Toast.makeText(MyDailyPlanner.this, "onPause is called", Toast.LENGTH_LONG).show();
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        Toast.makeText(MyDailyPlanner.this, "onResume is called", Toast.LENGTH_LONG).show();
+
+    }
+
+    @Override
     protected void onSaveInstanceState(Bundle outState) {
-
-
 
         super.onSaveInstanceState(outState);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
-
 
         super.onRestoreInstanceState(savedInstanceState);
     }
