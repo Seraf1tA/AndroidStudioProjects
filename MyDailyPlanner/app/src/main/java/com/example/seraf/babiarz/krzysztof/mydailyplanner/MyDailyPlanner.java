@@ -1,6 +1,7 @@
 package com.example.seraf.babiarz.krzysztof.mydailyplanner;
 
 import android.content.ClipData;
+import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Point;
@@ -16,6 +17,8 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class MyDailyPlanner extends AppCompatActivity {
 
@@ -35,7 +38,6 @@ public class MyDailyPlanner extends AppCompatActivity {
             row5_4, row5_5, row5_6, row5_7, row6_1, row6_2, row6_3, row6_4, row6_5, row6_6, row6_7,
             row7_1, row7_2, row7_3, row7_4, row7_5, row7_6, row7_7;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +46,89 @@ public class MyDailyPlanner extends AppCompatActivity {
         /*getDate();*/
         initialize();
         ClickListeners();
+
+        row1_2.setText("hi");
+        row4_3.setText("efebge");
+
+        ArrayList<String> tasks = new ArrayList<String>();
+
+        tasks.add(row1_1.getText().toString());
+        tasks.add(row1_2.getText().toString());
+        tasks.add(row1_3.getText().toString());
+        tasks.add(row1_4.getText().toString());
+        tasks.add(row1_5.getText().toString());
+        tasks.add(row1_6.getText().toString());
+        tasks.add(row1_7.getText().toString());
+
+        tasks.add(row2_1.getText().toString());
+        tasks.add(row2_2.getText().toString());
+        tasks.add(row2_3.getText().toString());
+        tasks.add(row2_4.getText().toString());
+        tasks.add(row2_5.getText().toString());
+        tasks.add(row2_6.getText().toString());
+        tasks.add(row2_7.getText().toString());
+
+        tasks.add(row3_1.getText().toString());
+        tasks.add(row3_2.getText().toString());
+        tasks.add(row3_3.getText().toString());
+        tasks.add(row3_4.getText().toString());
+        tasks.add(row3_5.getText().toString());
+        tasks.add(row3_6.getText().toString());
+        tasks.add(row3_7.getText().toString());
+
+        tasks.add(row4_1.getText().toString());
+        tasks.add(row4_2.getText().toString());
+        tasks.add(row4_3.getText().toString());
+        tasks.add(row4_4.getText().toString());
+        tasks.add(row4_5.getText().toString());
+        tasks.add(row4_6.getText().toString());
+        tasks.add(row4_7.getText().toString());
+
+        tasks.add(row5_1.getText().toString());
+        tasks.add(row5_2.getText().toString());
+        tasks.add(row5_3.getText().toString());
+        tasks.add(row5_4.getText().toString());
+        tasks.add(row5_5.getText().toString());
+        tasks.add(row5_6.getText().toString());
+        tasks.add(row5_7.getText().toString());
+
+        tasks.add(row6_1.getText().toString());
+        tasks.add(row6_2.getText().toString());
+        tasks.add(row6_3.getText().toString());
+        tasks.add(row6_4.getText().toString());
+        tasks.add(row6_5.getText().toString());
+        tasks.add(row6_6.getText().toString());
+        tasks.add(row6_7.getText().toString());
+
+        tasks.add(row7_1.getText().toString());
+        tasks.add(row7_2.getText().toString());
+        tasks.add(row7_3.getText().toString());
+        tasks.add(row7_4.getText().toString());
+        tasks.add(row7_5.getText().toString());
+        tasks.add(row7_6.getText().toString());
+        tasks.add(row7_7.getText().toString());
+
+
+        edtText.setText(tasks.get(1));
+
+        task = edtText.getText().toString();
+        if (row1_1.getText().toString().equals("")) {
+            row1_1.setText(task);
+        } else if (row2_1.getText().toString().equals("")) {
+            row2_1.setText(task);
+        } else if (row3_1.getText().toString().equals("")) {
+            row3_1.setText(task);
+        } else if (row4_1.getText().toString().equals("")) {
+            row4_1.setText(task);
+        } else if (row5_1.getText().toString().equals("")) {
+            row5_1.setText(task);
+        } else if (row6_1.getText().toString().equals("")) {
+            row6_1.setText(task);
+        } else if (row7_1.getText().toString().equals("")) {
+            row7_1.setText(task);
+        } else {
+            Toast.makeText(getApplicationContext(), "You reach task limit, for now ;)", Toast.LENGTH_LONG).show();
+        }
 
     }
 
@@ -78,24 +163,10 @@ public class MyDailyPlanner extends AppCompatActivity {
     View.OnClickListener ClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            task = edtText.getText().toString();
-            if (row1_1.getText().toString().equals("")) {
-                row1_1.setText(task);
-            } else if (row2_1.getText().toString().equals("")) {
-                row2_1.setText(task);
-            } else if (row3_1.getText().toString().equals("")) {
-                row3_1.setText(task);
-            } else if (row4_1.getText().toString().equals("")) {
-                row4_1.setText(task);
-            } else if (row5_1.getText().toString().equals("")) {
-                row5_1.setText(task);
-            } else if (row6_1.getText().toString().equals("")) {
-                row6_1.setText(task);
-            } else if (row7_1.getText().toString().equals("")) {
-                row7_1.setText(task);
-            } else {
-                Toast.makeText(getApplicationContext(), "You reach task limit, for now ;)", Toast.LENGTH_LONG).show();
-            }
+
+            Intent intent = new Intent(MyDailyPlanner.this, NoteEditorActivity.class);
+            intent.putExtra("task", task);
+            startActivity(intent);
         }
     };
 
@@ -125,116 +196,164 @@ public class MyDailyPlanner extends AppCompatActivity {
         }
     };
 
-   public void ClickListeners() {
+    public void ClickListeners() {
 
-       findViewById(R.id.btnAdd).setOnClickListener(ClickListener);
-       // row1
-       findViewById(R.id.row1_1).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row1_1).setOnDragListener(DropListener);
-       findViewById(R.id.row1_2).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row1_2).setOnDragListener(DropListener);
-       findViewById(R.id.row1_3).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row1_3).setOnDragListener(DropListener);
-       findViewById(R.id.row1_4).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row1_4).setOnDragListener(DropListener);
-       findViewById(R.id.row1_5).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row1_5).setOnDragListener(DropListener);
-       findViewById(R.id.row1_6).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row1_6).setOnDragListener(DropListener);
-       findViewById(R.id.row1_7).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row1_7).setOnDragListener(DropListener);
-       // row2
-       findViewById(R.id.row2_1).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row2_1).setOnDragListener(DropListener);
-       findViewById(R.id.row2_2).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row2_2).setOnDragListener(DropListener);
-       findViewById(R.id.row2_3).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row2_3).setOnDragListener(DropListener);
-       findViewById(R.id.row2_4).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row2_4).setOnDragListener(DropListener);
-       findViewById(R.id.row2_5).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row2_5).setOnDragListener(DropListener);
-       findViewById(R.id.row2_6).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row2_6).setOnDragListener(DropListener);
-       findViewById(R.id.row2_7).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row2_7).setOnDragListener(DropListener);
-       // row3
-       findViewById(R.id.row3_1).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row3_1).setOnDragListener(DropListener);
-       findViewById(R.id.row3_2).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row3_2).setOnDragListener(DropListener);
-       findViewById(R.id.row3_3).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row3_3).setOnDragListener(DropListener);
-       findViewById(R.id.row3_4).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row3_4).setOnDragListener(DropListener);
-       findViewById(R.id.row3_5).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row3_5).setOnDragListener(DropListener);
-       findViewById(R.id.row3_6).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row3_6).setOnDragListener(DropListener);
-       findViewById(R.id.row3_7).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row3_7).setOnDragListener(DropListener);
-       // row4
-       findViewById(R.id.row4_1).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row4_1).setOnDragListener(DropListener);
-       findViewById(R.id.row4_2).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row4_2).setOnDragListener(DropListener);
-       findViewById(R.id.row4_3).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row4_3).setOnDragListener(DropListener);
-       findViewById(R.id.row4_4).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row4_4).setOnDragListener(DropListener);
-       findViewById(R.id.row4_5).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row4_5).setOnDragListener(DropListener);
-       findViewById(R.id.row4_6).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row4_6).setOnDragListener(DropListener);
-       findViewById(R.id.row4_7).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row4_7).setOnDragListener(DropListener);
-       // row5
-       findViewById(R.id.row5_1).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row5_1).setOnDragListener(DropListener);
-       findViewById(R.id.row5_2).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row5_2).setOnDragListener(DropListener);
-       findViewById(R.id.row5_3).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row5_3).setOnDragListener(DropListener);
-       findViewById(R.id.row5_4).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row5_4).setOnDragListener(DropListener);
-       findViewById(R.id.row5_5).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row5_5).setOnDragListener(DropListener);
-       findViewById(R.id.row5_6).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row5_6).setOnDragListener(DropListener);
-       findViewById(R.id.row5_7).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row5_7).setOnDragListener(DropListener);
-       // row6
-       findViewById(R.id.row6_1).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row6_1).setOnDragListener(DropListener);
-       findViewById(R.id.row6_2).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row6_2).setOnDragListener(DropListener);
-       findViewById(R.id.row6_3).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row6_3).setOnDragListener(DropListener);
-       findViewById(R.id.row6_4).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row6_4).setOnDragListener(DropListener);
-       findViewById(R.id.row6_5).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row6_5).setOnDragListener(DropListener);
-       findViewById(R.id.row6_6).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row6_6).setOnDragListener(DropListener);
-       findViewById(R.id.row6_7).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row6_7).setOnDragListener(DropListener);
-       // row7
-       findViewById(R.id.row7_1).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row7_1).setOnDragListener(DropListener);
-       findViewById(R.id.row7_2).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row7_2).setOnDragListener(DropListener);
-       findViewById(R.id.row7_3).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row7_3).setOnDragListener(DropListener);
-       findViewById(R.id.row7_4).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row7_4).setOnDragListener(DropListener);
-       findViewById(R.id.row7_5).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row7_5).setOnDragListener(DropListener);
-       findViewById(R.id.row7_6).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row7_6).setOnDragListener(DropListener);
-       findViewById(R.id.row7_7).setOnLongClickListener(longClickListener);
-       findViewById(R.id.row7_7).setOnDragListener(DropListener);
+        // row1
+        findViewById(R.id.row1_1).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row1_1).setOnClickListener(ClickListener);
+        findViewById(R.id.row1_1).setOnDragListener(DropListener);
+        findViewById(R.id.row1_2).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row1_2).setOnClickListener(ClickListener);
+        findViewById(R.id.row1_2).setOnDragListener(DropListener);
+        findViewById(R.id.row1_3).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row1_3).setOnClickListener(ClickListener);
+        findViewById(R.id.row1_3).setOnDragListener(DropListener);
+        findViewById(R.id.row1_4).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row1_4).setOnClickListener(ClickListener);
+        findViewById(R.id.row1_4).setOnDragListener(DropListener);
+        findViewById(R.id.row1_5).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row1_5).setOnClickListener(ClickListener);
+        findViewById(R.id.row1_5).setOnDragListener(DropListener);
+        findViewById(R.id.row1_6).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row1_6).setOnClickListener(ClickListener);
+        findViewById(R.id.row1_6).setOnDragListener(DropListener);
+        findViewById(R.id.row1_7).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row1_7).setOnClickListener(ClickListener);
+        findViewById(R.id.row1_7).setOnDragListener(DropListener);
+        // row2
+        findViewById(R.id.row2_1).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row2_1).setOnClickListener(ClickListener);
+        findViewById(R.id.row2_1).setOnDragListener(DropListener);
+        findViewById(R.id.row2_2).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row2_2).setOnClickListener(ClickListener);
+        findViewById(R.id.row2_2).setOnDragListener(DropListener);
+        findViewById(R.id.row2_3).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row2_3).setOnClickListener(ClickListener);
+        findViewById(R.id.row2_3).setOnDragListener(DropListener);
+        findViewById(R.id.row2_4).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row2_4).setOnClickListener(ClickListener);
+        findViewById(R.id.row2_4).setOnDragListener(DropListener);
+        findViewById(R.id.row2_5).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row2_5).setOnClickListener(ClickListener);
+        findViewById(R.id.row2_5).setOnDragListener(DropListener);
+        findViewById(R.id.row2_6).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row2_6).setOnClickListener(ClickListener);
+        findViewById(R.id.row2_6).setOnDragListener(DropListener);
+        findViewById(R.id.row2_7).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row2_7).setOnClickListener(ClickListener);
+        findViewById(R.id.row2_7).setOnDragListener(DropListener);
+        // row3
+        findViewById(R.id.row3_1).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row3_1).setOnClickListener(ClickListener);
+        findViewById(R.id.row3_1).setOnDragListener(DropListener);
+        findViewById(R.id.row3_2).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row3_2).setOnClickListener(ClickListener);
+        findViewById(R.id.row3_2).setOnDragListener(DropListener);
+        findViewById(R.id.row3_3).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row3_3).setOnClickListener(ClickListener);
+        findViewById(R.id.row3_3).setOnDragListener(DropListener);
+        findViewById(R.id.row3_4).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row3_4).setOnClickListener(ClickListener);
+        findViewById(R.id.row3_4).setOnDragListener(DropListener);
+        findViewById(R.id.row3_5).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row3_5).setOnClickListener(ClickListener);
+        findViewById(R.id.row3_5).setOnDragListener(DropListener);
+        findViewById(R.id.row3_6).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row3_6).setOnClickListener(ClickListener);
+        findViewById(R.id.row3_6).setOnDragListener(DropListener);
+        findViewById(R.id.row3_7).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row3_7).setOnClickListener(ClickListener);
+        findViewById(R.id.row3_7).setOnDragListener(DropListener);
+        // row4
+        findViewById(R.id.row4_1).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row4_1).setOnClickListener(ClickListener);
+        findViewById(R.id.row4_1).setOnDragListener(DropListener);
+        findViewById(R.id.row4_2).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row4_2).setOnClickListener(ClickListener);
+        findViewById(R.id.row4_2).setOnDragListener(DropListener);
+        findViewById(R.id.row4_3).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row4_3).setOnClickListener(ClickListener);
+        findViewById(R.id.row4_3).setOnDragListener(DropListener);
+        findViewById(R.id.row4_4).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row4_4).setOnClickListener(ClickListener);
+        findViewById(R.id.row4_4).setOnDragListener(DropListener);
+        findViewById(R.id.row4_5).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row4_5).setOnClickListener(ClickListener);
+        findViewById(R.id.row4_5).setOnDragListener(DropListener);
+        findViewById(R.id.row4_6).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row4_6).setOnClickListener(ClickListener);
+        findViewById(R.id.row4_6).setOnDragListener(DropListener);
+        findViewById(R.id.row4_7).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row4_7).setOnClickListener(ClickListener);
+        findViewById(R.id.row4_7).setOnDragListener(DropListener);
+        // row5
+        findViewById(R.id.row5_1).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row5_1).setOnClickListener(ClickListener);
+        findViewById(R.id.row5_1).setOnDragListener(DropListener);
+        findViewById(R.id.row5_2).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row5_2).setOnClickListener(ClickListener);
+        findViewById(R.id.row5_2).setOnDragListener(DropListener);
+        findViewById(R.id.row5_3).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row5_3).setOnClickListener(ClickListener);
+        findViewById(R.id.row5_3).setOnDragListener(DropListener);
+        findViewById(R.id.row5_4).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row5_4).setOnClickListener(ClickListener);
+        findViewById(R.id.row5_4).setOnDragListener(DropListener);
+        findViewById(R.id.row5_5).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row5_5).setOnClickListener(ClickListener);
+        findViewById(R.id.row5_5).setOnDragListener(DropListener);
+        findViewById(R.id.row5_6).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row5_6).setOnClickListener(ClickListener);
+        findViewById(R.id.row5_6).setOnDragListener(DropListener);
+        findViewById(R.id.row5_7).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row5_7).setOnClickListener(ClickListener);
+        findViewById(R.id.row5_7).setOnDragListener(DropListener);
+        // row6
+        findViewById(R.id.row6_1).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row6_1).setOnClickListener(ClickListener);
+        findViewById(R.id.row6_1).setOnDragListener(DropListener);
+        findViewById(R.id.row6_2).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row6_2).setOnClickListener(ClickListener);
+        findViewById(R.id.row6_2).setOnDragListener(DropListener);
+        findViewById(R.id.row6_3).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row6_3).setOnClickListener(ClickListener);
+        findViewById(R.id.row6_3).setOnDragListener(DropListener);
+        findViewById(R.id.row6_4).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row6_4).setOnClickListener(ClickListener);
+        findViewById(R.id.row6_4).setOnDragListener(DropListener);
+        findViewById(R.id.row6_5).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row6_5).setOnClickListener(ClickListener);
+        findViewById(R.id.row6_5).setOnDragListener(DropListener);
+        findViewById(R.id.row6_6).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row6_6).setOnClickListener(ClickListener);
+        findViewById(R.id.row6_6).setOnDragListener(DropListener);
+        findViewById(R.id.row6_7).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row6_7).setOnClickListener(ClickListener);
+        findViewById(R.id.row6_7).setOnDragListener(DropListener);
+        // row7
+        findViewById(R.id.row7_1).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row7_1).setOnClickListener(ClickListener);
+        findViewById(R.id.row7_1).setOnDragListener(DropListener);
+        findViewById(R.id.row7_2).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row7_2).setOnClickListener(ClickListener);
+        findViewById(R.id.row7_2).setOnDragListener(DropListener);
+        findViewById(R.id.row7_3).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row7_3).setOnClickListener(ClickListener);
+        findViewById(R.id.row7_3).setOnDragListener(DropListener);
+        findViewById(R.id.row7_4).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row7_4).setOnClickListener(ClickListener);
+        findViewById(R.id.row7_4).setOnDragListener(DropListener);
+        findViewById(R.id.row7_5).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row7_5).setOnClickListener(ClickListener);
+        findViewById(R.id.row7_5).setOnDragListener(DropListener);
+        findViewById(R.id.row7_6).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row7_6).setOnClickListener(ClickListener);
+        findViewById(R.id.row7_6).setOnDragListener(DropListener);
+        findViewById(R.id.row7_7).setOnLongClickListener(longClickListener);
+        findViewById(R.id.row7_7).setOnClickListener(ClickListener);
+        findViewById(R.id.row7_7).setOnDragListener(DropListener);
 
-   }
+    }
 
     View.OnLongClickListener longClickListener = new View.OnLongClickListener() {
         @Override
@@ -280,8 +399,6 @@ public class MyDailyPlanner extends AppCompatActivity {
 
     }
 
-
-
     private void initialize() {
 
        /* // Show current date
@@ -289,12 +406,6 @@ public class MyDailyPlanner extends AppCompatActivity {
 
         // Table layout
         tLay = findViewById(R.id.tLay);
-
-        // Button
-        btnAdd = findViewById(R.id.btnAdd);
-
-        // EditText
-        edtText = findViewById(R.id.edtText);
 
         // row 1
         tRow1 = findViewById(R.id.tRow1);
@@ -367,6 +478,7 @@ public class MyDailyPlanner extends AppCompatActivity {
         row7_7 = findViewById(R.id.row7_7);
 
     }
+
 }
 
 
